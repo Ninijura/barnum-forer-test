@@ -91,13 +91,9 @@ function get_results () {
     let confirmation = false;
     if (accuracy != null && accuracy != "") {
         accuracy = parseFloat(accuracy);
-        confirmation = confirm("Okay, you got me! This isn't research at all! \n\n"+
-                               "I was trying to trick you by using statements that are "+
-                               "so general that nearly everybody will agree with them.\n\n"+
-                               "Do you want to learn more about this?");
     }
-    
-    else if (accuracy >= 0
+
+    if (accuracy >= 0
         && accuracy < 2) {
         confirmation = confirm("Oh, you are good! Did you realise that I tried to trick you?\n\n"+
                               "If you want to know what exactly I tried, you can click \"OK\" on this dialog.");
@@ -110,12 +106,20 @@ function get_results () {
                                "If you want to know more about this technique and how to avoid falling "+
                                "for it, click on \"OK\".");
     }
-    else {
+    else if (accuracy >= 3.75) {
         confirmation = confirm("Ha! Gotcha! :-) \n\n"+
                                "This was all just a hoax, I didn't actually measure anything.\n\n"+
                                "Please click on \"OK\", and I'll take you to some more information "+
                                "as well as some good tips on how to avoid falling for this tactic.");
         
+
+    }
+
+    else {
+        confirmation = confirm("Okay, you got me! This isn't research at all! \n\n"+
+                               "I was trying to trick you by using statements that are "+
+                               "so general that nearly everybody will agree with them.\n\n"+
+                               "Do you want to learn more about this?");
 
     }
 
