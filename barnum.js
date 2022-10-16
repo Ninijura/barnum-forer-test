@@ -76,12 +76,6 @@ function get_n_random_statements(n) {
 }
 
 
-function testfunction () {
-    sleep(1000);
-    $("#measure-square").css("height", "50px");
-}
-
-
 function remove_animation() {
     $("#measure-square").removeClass("scanimation");
 }
@@ -89,14 +83,52 @@ function remove_animation() {
 function get_results () {
 
     let result = get_n_random_statements(7);
-    let accuracy = prompt("Your results are here!\n"+
+    let accuracy = prompt("Your results are here!\n\n"+
                           result+
                           "\nOn a scale of 1-5, where 5 is highly accurate and 1 is not accurate at all,"+
                           " how would you rate your results?", "");
-    if (accuracy != "" && accuracy != null) {
-        console.log(accuracy)
+
+    let confirmation = false;
+    if (accuracy != null && accuracy != "") {
+        accuracy = parseFloat(accuracy);
+        confirmation = confirm("Okay, you got me! This isn't research at all! \n\n"+
+                               "I was trying to trick you by using statements that are "+
+                               "so general that nearly everybody will agree with them.\n\n"+
+                               "Do you want to learn more about this?");
+    }
+    
+    else if (accuracy >= 0
+        && accuracy < 2) {
+        confirmation = confirm("Oh, you are good! Did you realise that I tried to trick you?\n\n"+
+                              "If you want to know what exactly I tried, you can click \"OK\" on this dialog.");
+    }
+    else if (accuracy >= 2 && accuracy < 3.75) {
+        confirmation = confirm("Well, I could have done better, I guess...\n\n"+
+                               "But not in measuring your personality, because I didn't actually do that. " +
+                               "I used fully general statements in order to make you feel "+
+                               "as if I understood you. \n\n"+
+                               "If you want to know more about this technique and how to avoid falling "+
+                               "for it, click on \"OK\".");
+    }
+    else {
+        confirmation = confirm("Ha! Gotcha! :-) \n\n"+
+                               "This was all just a hoax, I didn't actually measure anything.\n\n"+
+                               "Please click on \"OK\", and I'll take you to some more information "+
+                               "as well as some good tips on how to avoid falling for this tactic.");
+        
+
+    }
+
+    if (confirmation) {
+        console.log("you clicked ok");
+        window.location="./explanation.html";
     }
 }
+
+function test () {
+    window.location="./explanation.html"; 
+}
+
 
 function start_scan () {
     console.log("Starting scan.");
