@@ -1,0 +1,44 @@
+#about {
+    max-width: 42%;
+    margin: 0 5% 5% 5%;
+    float: left; 
+}
+
+#measure-square {
+    height: 600px;
+    width: 400px; 
+    background-color: red;
+    float: right;
+    margin-right: 300px !important;
+    margin: 100px;
+}
+
+.scanimation {
+    animation-duration:10s; 
+    animation-name: scan;
+}
+
+@keyframes scan {
+    0% {background-color: red;}
+    12% {background-color: red;}
+    13% {background-color: white;}
+    14% {background-color: red;}
+    34% {background-color: red;}
+    35% {background-color: white;}
+    39% {background-color: white;}
+    40% {background-color: red;}
+    
+    49% {background-color: red;}
+    50% {background-color: white;}
+    54% {background-color: white;}
+    55% {background-color: red;}
+
+    78% {background-color: red;}
+    79% {background-color: yellow;}
+    100% {background-color: yellow;}
+}
+
+.right-container {
+    max-width: 42%;
+    float: right;  
+}

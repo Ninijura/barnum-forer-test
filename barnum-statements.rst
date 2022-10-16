@@ -3,7 +3,7 @@
 Barnum statements
 =================
 
-You have a great need for other peopel to like or admire you.
+You have a great need for other people to like or admire you.
 You have a tendency to be critical of yourself.
 You have a great deal of unused capacity which you have not turned to your advantage.
 Disciplined and self-controlled outside, you tend to be worrisome and insecure inside.
@@ -19,7 +19,7 @@ You tend to be very loyal, especially with people who mean a lot to you.
 You are usually sure of your opinions, though at times you may have a hard time finding the right words to articulate them.
 You often feel that you give in too easily under pressure.
 You are a fun loving person, who likes to laugh.
-You are warm-hearted though a little qquirky at times.
+You are warm-hearted though a little quirky at times.
 Fairness is a core value for you.
 You critically analyse yourself in your duties.
 You are often very good at compensating for your weaknesses.

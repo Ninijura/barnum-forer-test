@@ -1,15 +1,42 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Barnum-Forer Personality Test</title>
-  <script type="text/javascript" src="barnum.js"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Barnum-Forer Personality Test</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="jquery-3.6.1.js"></script>
+    <script type="text/javascript" src="barnum.js"></script>
+  </head>
+  <body>
 
-<h1>Barnum-Forer Personality Test</h1>
-<p>This </p>
-<input type="button" onclick="get_n_random_statements(7)" value="Results">
+    <div id="about">
 
-</body>
+      <h1>Barnum-Forer Personality Test</h1>
+      <p>The Barnum-Forer Personality Test is based upon modern knowledge about the human
+        psyche. The technique we use is shown to give reliable results, as participants
+        conistently rate the accuracy of the results above 80%.<a href="http://apsychoserver.psych.arizona.edu/JJBAReprints/PSYC621/Forer_The%20fallacy%20of%20personal%20validation_1949.pdf">[1]</a> </p>
+
+      <p>This setup is part of an ongoing research project, combining our knowledge about
+        the Barnum-Forer Personality Test with knowledge about how personality influences
+        different physiological values. </p>
+
+      <p>In order to participate in the study, please place your hand on the apparatus to
+        the right and then click on the "Start scan" button below. The system will proceed
+        to measure factors like the conductivity of your skin and the pressure you apply to
+        the surface. Based on this, we will calculate your results.</p>
+
+      <p>Please take a moment after receiving your results to provide us with feedback on
+        the accuracy of the test. This is important for our research.</p>
+
+      <input type="button" onclick="start_scan()" value="Start scan">
+      <input type="button" onclick="testfunction()" value="Test"/>
+
+    </div>
+
+    <div class="right-container">
+      <h1>Place your hand here and press the button.</h1>
+    <div id="measure-square"/>
+    </div>
+
+  </body>
 </html> 

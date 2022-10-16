@@ -14,13 +14,22 @@ let statements =["You have a great need for other people to like or admire you."
                  "You are usually sure of your opinions, though at times you may have a hard time finding the right words to articulate them.",
                  "You often feel that you give in too easily under pressure.",
                  "You are a fun loving person, who likes to laugh.",
-                 "You are warm-hearted though a little qquirky at times.",
+                 "You are warm-hearted though a little quirky at times.",
                  "Fairness is a core value for you.",
                  "You critically analyse yourself in your duties.",
                  "You are often very good at compensating for your weaknesses.",
                  "It is important for you to be in control of your own life.",
                  "You pride yourself on being a rational thinker.",
                  "You dislike when people seem to get unreasonably angry or upset."]
+
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
 
 function get_random_number(n) {
     return Math.floor(Math.random() * n);
@@ -62,9 +71,40 @@ function get_n_random_statements(n) {
     for (let i = 0; i < n; i++) {
         n_statements = n_statements.concat(statements_array[i], "\n\n")
     }
-    alert(n_statements);
 
     return n_statements;
 }
 
 
+function testfunction () {
+    sleep(1000);
+    $("#measure-square").css("height", "50px");
+}
+
+
+function remove_animation() {
+    $("#measure-square").removeClass("scanimation");
+}
+
+function get_results () {
+
+    let result = get_n_random_statements(7);
+    let accuracy = prompt("Your results are here!\n"+
+                          result+
+                          "\nOn a scale of 1-5, where 5 is highly accurate and 1 is not accurate at all,"+
+                          " how would you rate your results?", "");
+    if (accuracy != "" && accuracy != null) {
+        console.log(accuracy)
+    }
+}
+
+function start_scan () {
+    console.log("Starting scan.");
+
+    
+    $("#measure-square").addClass("scanimation");
+    let t1 = setTimeout(remove_animation, 10000);
+
+    let t2 = setTimeout(get_results, 10000); 
+    
+}
