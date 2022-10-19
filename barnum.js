@@ -20,6 +20,7 @@ let statements =["You have a great need for other people to like or admire you."
                  "You are often very good at compensating for your weaknesses.",
                  "It is important for you to be in control of your own life.",
                  "You pride yourself on being a rational thinker.",
+                 "You often find yourself feeling misunderstood by others.",
                  "You dislike when people seem to get unreasonably angry or upset."]
 
 
