@@ -85,9 +85,12 @@ function get_results () {
 
     console.log("Calculating results!"); 
     let result = get_n_random_statements(7);
-    $("#results").html(result+
-                      "<br/><br/>On a scale of 1-5, where 5 is highly accurate and 1 is not accurate at all,"+
-                      " how would you rate your results? <br/>");
+    $("#results").html("The following are your results. Please don't share them "+
+                       "with anybody who has not yet taken the test, since this would "+
+                       "influence the experimental results. <br/><br/>"+
+                       result+
+                       "<br/><br/>On a scale of 1-5, where 5 is highly accurate and 1 is not accurate at all,"+
+                       " how would you rate your results? <br/>");
 
     // Working here. 
     dialog_form.dialog( "open" ); 
