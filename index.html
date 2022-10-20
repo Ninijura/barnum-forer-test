@@ -4,10 +4,28 @@
     <meta charset="UTF-8">
     <title>Barnum-Forer Personality Test</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script type="text/javascript" src="jquery-3.6.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script type="text/javascript" src="barnum.js"></script>
   </head>
   <body>
+
+    <div id="dialog-form" title="Your results are here!">
+      <div id="results"></div>
+      <form>
+        <fieldset>
+          <input name="rating" type="text" value="" id="rating" style="width:425px"/>
+          <input type="submit" tabindex="-1" style="visibility:hidden;">
+        </fieldset>
+      </form>
+    </div>
+
+
+    <div id="after_rating" title="Would you like to know more?">
+      
+    </div>
+    
 
     <div id="about">
 
@@ -32,6 +50,7 @@
       <p>Please take a moment after receiving your results to provide us with feedback on
         the accuracy of the test. This is important for our research.</p>
 
+      
       <input type="button" onclick="start_scan()" value="Start scan">
       <!-- <input type="button" onclick="test()" value="test"> -->
 
