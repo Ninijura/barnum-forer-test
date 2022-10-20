@@ -175,7 +175,7 @@ $( function () {
     
     dialog_form = $("#dialog-form").dialog({
         autoOpen: false,
-        height: 650,
+        height: 700,
         width: 500,
         modal: true,
         position: {my: "left", at: "left+10%"},
@@ -194,7 +194,7 @@ $( function () {
     
     rating_dialog = $( "#after_rating" ).dialog({
         autoOpen: false,
-        height: 650,
+        height: 700,
         width: 500,
         modal: true,
         position: {my: "left", at: "left+10%"},
